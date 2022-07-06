@@ -6,16 +6,14 @@
       <AddTodo />
       <FilterTodos />
       <TodosList />
-      <DeleteTodo />
     </div>
   </div>
 </template>
 
 <script>
-import TodosList from "@/components/TodosList";
-import AddTodo from "@/components/AddTodo";
-import FilterTodos from "@/components/FilterTodos";
-import DeleteTodo from "@/components/DeleteTodo";
+import TodosList from "@/components/todos/TodosList";
+import AddTodo from "@/components/todos/AddTodo";
+import FilterTodos from "@/components/todos/FilterTodos";
 
 export default {
   name: "App",
@@ -23,7 +21,6 @@ export default {
     TodosList,
     AddTodo,
     FilterTodos,
-    DeleteTodo,
   },
 };
 </script>

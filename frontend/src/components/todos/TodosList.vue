@@ -14,7 +14,7 @@
           class="todo"
           v-bind:class="{'is-complete':todo.completed}">
         {{ todo.title }}
-        <i @click="deleteTodo(todo.id)" class="fas fa-trash-alt"></i>
+        <i @click="onDeleteTodo(todo.id)" class="fas fa-trash-alt"></i>
       </div>
     </div>
   </div>
@@ -34,6 +34,9 @@ export default {
         completed: !currentTodo.completed
       }
       this.updateTodo(updateTodo);
+    },
+    onDeleteTodo(currentTodo) {
+      this.deleteTodo(currentTodo.id);
     }
   },
   computed: {

@@ -23,9 +23,10 @@ const actions = {
         commit('setUpdatedTodo', response.data)
     },
     async addTodo({ commit }, title) {
+        console.log(title)
         const response = await axios.post(api_url, {
             todo: {
-                title,
+                title: title,
                 completed: false
             }
         });
